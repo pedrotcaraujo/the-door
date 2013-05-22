@@ -1,0 +1,26 @@
+#wrap {
+	-webkit-perspective: 500;
+	-moz-perspective: 500;
+}
+#door {
+    margin: auto;
+    width:500px;
+    height:500px;
+    background: red;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    
+}
+#wrap:hover #door {
+	-webkit-perspective: 500;
+     -webkit-transition:  5s;
+     -moz-transition:  1s;
+    -webkit-transform: rotateY(95deg);
+    -moz-transform: rotateY(90deg);
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+}

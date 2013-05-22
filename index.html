@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>The Door</title>
+
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+	<audio id="open">
+		<source src="audio/creaking-door-1.mp3"></source>	
+	</audio>
+	<audio id="close">
+		<source src="audio/door-7-close.mp3"></source>		
+	</audio>
+
+	<div id="wrap" onmouseover="playOpen()" onmouseout="playClose()">
+		<div id="door"></div>
+	</div>
+
+	<!-- JS -->
+	<script>
+	var audioOpen = document.getElementById("open");
+	var audioClose = document.getElementById("close");
+	function playOpen() {
+	audioClose.pause();
+	audioClose.currentTime=0;
+	audioOpen.currentTime=0;
+	audioOpen.play();
+	}
+	function playClose() {
+		audioOpen.pause();
+		audioClose.currentTime=0;
+		audioOpen.currentTime=0;
+	setTimeout(function() {audioClose.play()}, 900);
+	}		
+	</script>
+	
+</body>
+</html>
